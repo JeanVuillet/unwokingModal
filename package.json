@@ -1,0 +1,91 @@
+{
+  "name": "mymodal2",
+  "version": "15.3.0",
+  "description": "Test publication package NPM. Contenu créé à partir du tutoriel du site https://www.cril.univ-artois.fr/~boussemart/react/chapter02.html",
+  "license": "MIT",
+  "author": "jeanvuillet2",
+  "keywords": [
+    "react",
+    "modal",
+    "component",
+    "ui"
+  ],
+  "files": [
+    "dist",
+    "dist/style.css",
+    "README.md"
+  ],
+  "main": "./dist/my-modal.umd.js",
+  "module": "./dist/my-modal.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-modal.es.js",
+      "require": "./dist/my-modal.umd.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/react": "^15.0.7",
+    "@vitejs/plugin-react": "^4.3.0",
+    "c8": "^9.1.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "jsdom": "^24.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-test-renderer": "^18.3.1",
+    "style-loader": "^4.0.0",
+    "styled-components": "^6.1.11",
+    "vite": "^5.2.11",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.11"
+  }
+}
